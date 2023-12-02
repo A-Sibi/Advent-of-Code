@@ -1,23 +1,23 @@
-with open('2023/data/day1.txt') as file:
+with open('calendar_2023/data/day1.txt') as file:
     lines = file.readlines()
 
-# lines = ['two1nine']
+# part 1
 
-# sum = 0
-# for line in lines:
-#     val = ''
-#     for ch in line:
-#         if ch.isnumeric():
-#             val += ch
-#             break
-#     line_rev = line[::-1]
-#     for ch in line_rev:
-#         if ch.isnumeric():
-#             val += ch
-#             break
-#     sum += int(val)
+sum = 0
+for line in lines:
+    val = ''
+    for ch in line:
+        if ch.isnumeric():
+            val += ch
+            break
+    line_rev = line[::-1]
+    for ch in line_rev:
+        if ch.isnumeric():
+            val += ch
+            break
+    sum += int(val)
 
-# print(sum)
+print(f"Part 1: {sum}")
 
 # part 2
 
@@ -40,8 +40,6 @@ for line in lines:
             val += reg_nums[line[i:i+5]]
             break
 
-    # line_rev = line[::-1]
-
     for i in range(len(line)-1,-1,-1):
         if line[i].isnumeric():
             val += line[i]
@@ -58,5 +56,4 @@ for line in lines:
 
     sum += int(val)
 
-print(sum)
-
+print(f"Part 2: {sum}")

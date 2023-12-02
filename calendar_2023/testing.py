@@ -1,5 +1,4 @@
-s = '5' + str(5)
+a = "6 red, 2 green; 5 blue, 6 red; 1 red"
+list = a.split(" ")
 
-a = '123456789'
-
-print(a[7:4:-1])
+print(list)
